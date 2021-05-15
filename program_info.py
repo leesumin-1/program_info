@@ -20,7 +20,7 @@ for tv_program in program_list:
 
     title= driver.find_element_by_class_name("title").text
     start_and_when = driver.find_element_by_class_name("info_group").text
-    print(title+start_and_when)
+    print("\t", title + ' : ' + start_and_when.lstrip('편성\n') + "\n")
 
     time.sleep(3)
     search_box = driver.find_element_by_name("query")
